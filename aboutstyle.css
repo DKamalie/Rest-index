@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  color: #fff;
+  background-image: url("./tile22.jpg");
+  font-family: 'Oxygen', sans-serif;
+  width: 100%;
+  height: auto;
+
+}
+/* --------------ALL LINK STYLES----------*/
+}
+.navbar a:link {
+  color: #000;
+}
+.navbar a:visited {
+  color: #000;
+}
+.navbar a:hover {
+  color: #fff;
+  transition: 0.2s;
+  background-color: #fff;
+  border-radius: 25px;
+
+}
+.navbar a:active {
+  color: black;
+}
+.navbar a {
+  text-decoration: none;
+  padding: 20px;
+  background-color: #D8D8C5;
+  border-radius: 5px;
+  background-image: url("./navwood.jpg");
+  transition: 1s ease-in-out;
+  color: black;
+}
+
+/*-------------NAVIGATION BAR --------*/
+.navbar {
+  display: grid;
+  grid-template-columns: 48% 13% 13% 13% 13% ;
+  grid-template-rows: repeat(1, 100%);
+  grid-template-areas:
+  "logo home menu about contact";
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+}
+.logo {
+grid-area: logo;
+padding: 20px 20px;
+font-family: cursive;
+color: #006600;
+font-size: 30px;
+padding: 0px;
+color: #FFF;
+
+}
+.home {
+grid-area: home;
+background: #000;
+padding: 40px 20px;
+color: #FFF;
+
+
+}
+.menu {
+grid-area: menu;
+background: #000;
+padding: 40px 20px;
+color: #FFF;
+}
+.about {
+grid-area: about;
+background: #000;
+padding: 40px 20px;
+color: #FFF;
+}
+.contact {
+grid-area: contact;
+background: #000;
+padding: 40px 20px;
+color: #FFF;
+}
+
+
+/* NAV BAR *//*------------^NAVIGATION BAR^ --------*/
+/* -----------CONTENT---------------*/
+.aboutwebsite {
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-family: inherit;
+  padding: 20px;
+}
+.aboutwebsite h1 {
+  text-align: center;
+  padding: 20px;
+}
+.aboutwebsite p {
+  padding: 50px;
+}
+
+.backgroundsect {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: rgb(0, 0, 0) solid 5px;
+}
+/* -----------^CONTENT^---------------*/
+/*-------------FOOTER --------*/
+/*-------------FOOTER --------*/
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: repeat(1, fr);
+  grid-template-areas:
+  "hours address quote";
+  margin-top: 20px;
+
+}
+.hours {
+  grid-area: hours;
+  background-color: #000;
+  padding: 50px;
+  word-spacing: 10px;
+
+}
+.address {
+  grid-area: address;
+  background-color: #000;
+  padding: 50px;
+
+}
+.quote {
+  grid-area: quote;
+  background-color: #000;
+  padding: 50px;
+
+}
+#deliv {
+  color: green;
+  font-size: 13px;
+}
+#hours {
+  font-size: 25px;
+}
+#address {
+  font-size: 25px;
+}
+
+
+/*-------------^FOOTER^ --------*/
+
+
+/*---- MEDIA QUERIES For Nav Bar---------*/
+/* 1050px Screen */
+@media(max-width: 1050px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas:
+    "logo home menu"
+    "logo about contact";
+    padding: 10px;
+  }
+  .logo {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  .home {
+    grid-area: home;
+
+  }
+  .menu {
+    grid-area: menu;
+
+  }
+  .about {
+    grid-area: about;
+
+  }
+  .contact {
+    grid-area: contact;
+
+  }
+  iframe {
+    width: 600px;
+    height: 400px;
+  }
+}
+/* 580px Screen */
+@media(max-width: 580px) {
+  .navbar {
+    display: grid;
+    height: 630px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 18.75% 18.75% 18.75% 18.75% ;
+    grid-template-areas:
+    "logo"
+    "home"
+    "menu"
+    "about"
+    "contact";
+    background-color: rgba(16, 7, 22, 0.8) ;
+
+  }
+  .logo {
+    grid-area: logo;
+    adding: 10px 10px 40px 10px;
+
+  }
+  .home {
+    grid-area: home;
+    padding: 2px;
+    margin-bottom: 10px;
+  }
+  .menu {
+    grid-area: menu;
+    padding: 2px;
+  }
+  .about {
+    grid-area: about;
+    padding: 2px;
+  }
+  .contact {
+    grid-area: contact;
+    padding: 2px;
+  }
+  .navbar a {
+    padding: 10px 80px;
+  }
+  iframe {
+    width: 300px;
+    height: 200px;
+  }
+
+}
+
+
+
+
+
+
+
+
+  /*----^ MEDIA QUERIES For Nav Bar^---------*/
+
+
+  /*---- MEDIA QUERIES For Footer---------*/
+  @media(max-width: 740px) {
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto, minmax(1fr, 50%));
+      grid-template-areas:
+      "hours"
+      "address"
+      "quote";
+      margin-top: 10px;
+      padding: 5px;
+      text-align: center;
+    }
+    .hours {
+      grid-area: hours;
+      padding:10px 10px 20px 10px;
+    }
+    .address {
+      grid-area: address;
+      padding: 10px 10px 20px 10px;
+    }
+    .quote {
+      grid-area: quote;
+      padding: 10px 10px 20px 10px;
+    }
+  }
+  /*----^ MEDIA QUERIES For Footer^---------*/
